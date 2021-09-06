@@ -1,0 +1,10 @@
+---
+- name: Test playbook
+  hosts: all
+  gather_facts: true
+  
+  tasks:
+  
+    - name: Print OS distribution details
+      debug:
+        msg: "{{ ansible_distribution }} {{ ansible_distribution_version }}"
